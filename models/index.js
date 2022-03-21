@@ -38,24 +38,24 @@ Comment.belongsTo(Post, {
 
 // A location can have many posts
 Location.hasMany(Post, {
-  foreignKey: "user_id",
+  foreignKey: "location_id",
   onDelete: "CASCADE",
 });
 
 // These posts then belong to that location
 Post.belongsTo(Location, {
-  foreignKey: "user_id",
+  foreignKey: "location_id",
 });
 
 // A Location can have many comments
 Location.hasMany(Comment, {
-  foreignKey: "user_id",
+  foreignKey: "location_id",
   onDelete: "CASCADE",
 });
 
 // these comments then belong to that location
 Comment.belongsTo(Location, {
-  foreignKey: "user_id",
+  foreignKey: "location_id",
 });
 
 module.exports = { User, Location, Comment, Post };
