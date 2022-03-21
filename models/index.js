@@ -2,6 +2,7 @@ const User = require("./User");
 const Location = require("./Location");
 const Comment = require("./Comment");
 const Post = require("./Post");
+const Team = require("./Team");
 
 // A user can have many posts
 User.hasMany(Post, {
@@ -58,4 +59,15 @@ Comment.belongsTo(Location, {
   foreignKey: "location_id",
 });
 
-module.exports = { User, Location, Comment, Post };
+// Location can have more than one team
+Location.hasMany(Team, {
+  foreignKey: "location_id",
+  onDelete: "CASCADE",
+});
+
+// teams belong to the location they are located in
+Team.belongsTo(Location, {
+  foreignKey: "location_id",
+});
+
+module.exports = { User, Location, Comment, Post, Team };
