@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Comment extends Model {}
+class LocationReview extends Model {}
 
-Comment.init(
+LocationReview.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -16,15 +16,6 @@ Comment.init(
       references: {
         model: "user",
         key: "id",
-        unique: false,
-      },
-    },
-    post_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "post",
-        key: "id",
-        unique: false,
       },
     },
     location_id: {
@@ -35,13 +26,21 @@ Comment.init(
         unique: false,
       },
     },
+    review_score: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        min: 1,
+        max: 5,
+      },
+    },
     content: {
       type: DataTypes.STRING,
       allowNull: false,
     },
   },
 
-  { sequelize, freezeTableName: true, underscored: true, modelName: "comment" }
+  { sequelize, freezeTableName: true, underscored: true, modelName: "locationReview" }
 );
 
-module.exports = Comment;
+module.exports = LocationReview;

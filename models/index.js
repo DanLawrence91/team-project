@@ -1,61 +1,47 @@
 const User = require("./User");
 const Location = require("./Location");
-const Comment = require("./Comment");
-const Post = require("./Post");
+const LocationReview = require("./LocationReview");
+const Team = require("./Team");
 
 // A user can have many posts
-User.hasMany(Post, {
+User.hasMany(LocationReview, {
   foreignKey: "user_id",
   onDelete: "CASCADE",
 });
 
 // These posts then belong to that user
-Post.belongsTo(User, {
+LocationReview.belongsTo(User, {
   foreignKey: "user_id",
-});
-
-// A user can have many comments
-User.hasMany(Comment, {
-  foreignKey: "user_id",
-  onDelete: "CASCADE",
-});
-
-// these comments then belong to that user
-Comment.belongsTo(User, {
-  foreignKey: "user_id",
-});
-
-// A post can have many comments
-Post.hasMany(Comment, {
-  foreignKey: "post_id",
-  onDelete: "CASCADE",
-});
-
-// These comments belong to that post
-Comment.belongsTo(Post, {
-  foreignKey: "post_id",
 });
 
 // A location can have many posts
-Location.hasMany(Post, {
+Location.hasMany(LocationReview, {
   foreignKey: "location_id",
   onDelete: "CASCADE",
 });
 
 // These posts then belong to that location
-Post.belongsTo(Location, {
+LocationReview.belongsTo(Location, {
   foreignKey: "location_id",
 });
 
-// A Location can have many comments
-Location.hasMany(Comment, {
+// Location can have more than one team
+Location.hasMany(Team, {
   foreignKey: "location_id",
   onDelete: "CASCADE",
 });
 
-// these comments then belong to that location
-Comment.belongsTo(Location, {
+// teams belong to the location they are located in
+Team.belongsTo(Location, {
   foreignKey: "location_id",
 });
 
-module.exports = { User, Location, Comment, Post };
+Team.hasMany(User, {
+  foreignKey: "team_id",
+});
+
+User.belongsTo(Team, {
+  foreignKey: "team_id",
+});
+
+module.exports = { User, Location, LocationReview, Team };
