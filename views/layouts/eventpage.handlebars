@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-auto">
+    <button type="button" class="btn btn-outline-primary">Restaurants</button>
+  </div>
+      
+  <div class="col-auto">
+    <button type="button" class="btn btn-outline-primary">Soccer Events</button>
+  </div>
+</div>
+      
+<div class="col mt-4">
+  {{#if restaurants.length}}
+    <div class="col-md-6 project-list">
+      {{#each restaurants as |restaurants|}}
+        <div class="row mb-2">
+          <div class="col-md-8">
+            <h4><a href="/project/{{restaurants.id}}">{{restaurants.name}}</a></h4>
+          </div>
+          <div class="col-md-4">
+            <button class="btn btn-sm btn-danger" data-id="{{restaurants.id}}">DELETE</button>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+
+  {{#if soccerEvents.length}}
+    <div class="col-md-6 project-list">
+      {{#each soccerEvents as |soccerEvents|}}
+        <div class="col mb-2">
+          <div class="col-md-8">
+            <h4><a href="/project/{{soccerEvents.id}}">{{soccerEvents.name}}</a></h4>
+          </div>
+          <div class="col-md-4">
+            <button class="btn btn-sm btn-danger" data-id="{{soccerEvents.id}}">DELETE</button>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+</div>
