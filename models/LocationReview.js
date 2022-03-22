@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Post extends Model {}
+class LocationReview extends Model {}
 
-Post.init(
+LocationReview.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -26,9 +26,13 @@ Post.init(
         unique: false,
       },
     },
-    title: {
-      type: DataTypes.STRING,
+    review_score: {
+      type: DataTypes.INTEGER,
       allowNull: false,
+      validate: {
+        min: 1,
+        max: 5,
+      },
     },
     content: {
       type: DataTypes.STRING,
@@ -36,7 +40,7 @@ Post.init(
     },
   },
 
-  { sequelize, freezeTableName: true, underscored: true, modelName: "post" }
+  { sequelize, freezeTableName: true, underscored: true, modelName: "locationReview" }
 );
 
-module.exports = Post;
+module.exports = LocationReview;

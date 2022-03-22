@@ -1,27 +1,27 @@
 const User = require("./User");
 const Location = require("./Location");
-const Post = require("./Post");
+const LocationReview = require("./LocationReview");
 const Team = require("./Team");
 
 // A user can have many posts
-User.hasMany(Post, {
+User.hasMany(LocationReview, {
   foreignKey: "user_id",
   onDelete: "CASCADE",
 });
 
 // These posts then belong to that user
-Post.belongsTo(User, {
+LocationReview.belongsTo(User, {
   foreignKey: "user_id",
 });
 
 // A location can have many posts
-Location.hasMany(Post, {
+Location.hasMany(LocationReview, {
   foreignKey: "location_id",
   onDelete: "CASCADE",
 });
 
 // These posts then belong to that location
-Post.belongsTo(Location, {
+LocationReview.belongsTo(Location, {
   foreignKey: "location_id",
 });
 
@@ -36,4 +36,12 @@ Team.belongsTo(Location, {
   foreignKey: "location_id",
 });
 
-module.exports = { User, Location, Post, Team };
+Team.hasMany(User, {
+  foreignKey: "team_id",
+});
+
+User.belongsTo(Team, {
+  foreignKey: "team_id",
+});
+
+module.exports = { User, Location, LocationReview, Team };

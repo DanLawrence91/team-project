@@ -16,10 +16,28 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    first_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+    },
+    last_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+    },
     username: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
+    },
+    team_id: {
+      type: DataTypes.STRING,
+      references: {
+        model: "team",
+        key: "id",
+        unique: false,
+      },
     },
     email: {
       type: DataTypes.STRING,
