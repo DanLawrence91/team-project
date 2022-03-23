@@ -1,0 +1,28 @@
+.custom-btn {
+  width: 15rem;
+  border-radius: 10px;
+}
+
+.jumbo-text {
+  font-size: 2rem;
+}
+
+.custom-card {
+  margin: auto;
+}
+
+.custom-search {
+  width: 75%;
+}
+
+.custom-card-content {
+  text-align: center;
+}
+
+.custom-card-content h4 {
+  text-align: left;
+}
+
+.hidden {
+  display: none;
+}

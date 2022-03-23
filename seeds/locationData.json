@@ -1,29 +1,47 @@
 [
   {
-    "location": "London"
+    "location": "London",
+    "latitude": ,
+    "longitude":
   },
   {
-    "location": "Manchester"
+    "location": "Manchester",
+    "latitude": ,
+    "longitude":
   },
   {
-    "location": "Birmingham"
+    "location": "Birmingham",
+    "latitude": ,
+    "longitude":
   },
   {
-    "location": "Newcastle"
+    "location": "Newcastle",
+    "latitude": ,
+    "longitude":
   },
   {
-    "location": "Leeds"
+    "location": "Leeds",
+    "latitude": ,
+    "longitude":
   },
   {
-    "location": "liverpool"
+    "location": "Liverpool",
+    "latitude": ,
+    "longitude":
   },
   {
-    "location": "Norwich"
+    "location": "Norwich",
+    "latitude": ,
+    "longitude":
   },
   {
-    "location": "Southampton"
+    "location": "Southampton",
+    "latitude": ,
+    "longitude":
   },
   {
-    "location": "Brighton"
+    "location": "Brighton",
+    "latitude": ,
+    "longitude":
   }
 ]

@@ -26,13 +26,8 @@ User.init(
       allowNull: false,
       unique: true,
     },
-    username: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-    },
     team_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       references: {
         model: "team",
         key: "id",
