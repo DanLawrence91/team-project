@@ -1,1 +1,122 @@
-
+[
+    {
+        "location_id": 1,
+        "team_name": "Arsenal",
+        "latitude": ,
+        "longitude":
+    },
+    {
+        "location_id": 3,
+        "team_name": "Aston Villa",
+        "latitude": ,
+        "longitude":
+    },
+    {
+        "location_id": 1,
+        "team_name": "Brentford",
+        "latitude": ,
+        "longitude":
+    },
+    {
+        "location_id": 9,
+        "team_name": "Brighton",
+        "latitude": ,
+        "longitude":
+    },
+    {
+        "location_id": 2,
+        "team_name": "Burnley",
+        "latitude": ,
+        "longitude":
+    },
+    {
+        "location_id": 1,
+        "team_name": "Chelsea",
+        "latitude": ,
+        "longitude":
+    },
+    {
+        "location_id": 1,
+        "team_name": "Crystal Palace",
+        "latitude": ,
+        "longitude":
+    },
+    {
+        "location_id": 6,
+        "team_name": "Everton",
+        "latitude": ,
+        "longitude":
+    },
+    {
+        "location_id": 5,
+        "team_name": "Leeds United",
+        "latitude": ,
+        "longitude":
+    },
+    {
+        "location_id": 3,
+        "team_name": "Leicester City",
+        "latitude": ,
+        "longitude":
+    },
+    {
+        "location_id": 6,
+        "team_name": "Liverpool",
+        "latitude": ,
+        "longitude":
+    },
+    {
+        "location_id": 2,
+        "team_name": "Manchester City",
+        "latitude": ,
+        "longitude":
+    },
+    {
+        "location_id": 2,
+        "team_name": "Manchester United",
+        "latitude": ,
+        "longitude":
+    },
+    {
+        "location_id": 4,
+        "team_name": "Newcastle United",
+        "latitude": ,
+        "longitude":
+    },
+    {
+        "location_id": 7,
+        "team_name": "Norwich City",
+        "latitude": ,
+        "longitude":
+    },
+    {
+        "location_id": 8,
+        "team_name": "Southampton",
+        "latitude": ,
+        "longitude":
+    },
+    {
+        "location_id": 1,
+        "team_name": "Tottenham Hotspur",
+        "latitude": ,
+        "longitude":
+    },
+    {
+        "location_id": 1,
+        "team_name": "Watford",
+        "latitude": ,
+        "longitude":
+    },
+    {
+        "location_id": 1,
+        "team_name": "West Ham",
+        "latitude": ,
+        "longitude":
+    },
+    {
+        "location_id": 3,
+        "team_name": "Wolves",
+        "latitude": ,
+        "longitude":
+    }
+]
