@@ -3,7 +3,7 @@ const withAuth = require("../utils/auth");
 const { User, Team, TeamReview } = require("../models");
 
 // displays team reviews for that team
-router.get("/team/:id", withAuth, async (req, res) => {
+router.get("/:id", withAuth, async (req, res) => {
   try {
     const teamRevData = await Team.findByPk(req.params.id, {
       include: [
