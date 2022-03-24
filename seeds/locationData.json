@@ -1,47 +1,47 @@
 [
   {
     "location": "London",
-    "latitude": ,
-    "longitude":
+    "latitude": 51.5072,
+    "longitude": 0.1276
   },
   {
     "location": "Manchester",
-    "latitude": ,
-    "longitude":
+    "latitude": 53.4808,
+    "longitude": 2.2426
   },
   {
     "location": "Midlands",
-    "latitude": ,
-    "longitude":
+    "latitude": 52.4862,
+    "longitude": 1.8904
   },
   {
     "location": "Newcastle",
-    "latitude": ,
-    "longitude":
+    "latitude": 54.9783,
+    "longitude": 1.6178
   },
   {
     "location": "Leeds",
-    "latitude": ,
-    "longitude":
+    "latitude": 53.8008,
+    "longitude": 1.5491
   },
   {
     "location": "Liverpool",
-    "latitude": ,
-    "longitude":
+    "latitude": 53.4084,
+    "longitude": 2.9916
   },
   {
     "location": "Norwich",
-    "latitude": ,
-    "longitude":
+    "latitude": 52.6293,
+    "longitude": -1.2979
   },
   {
     "location": "Southampton",
-    "latitude": ,
-    "longitude":
+    "latitude": 50.9105,
+    "longitude": 1.4049
   },
   {
     "location": "Brighton",
-    "latitude": ,
-    "longitude":
+    "latitude": 50.8229,
+    "longitude": 0.1363
   }
 ]

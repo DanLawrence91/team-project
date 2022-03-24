@@ -16,12 +16,12 @@ Location.init(
       allowNull: false,
     },
     latitude: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DECIMAL(6, 4),
       allowNull: false,
       validate: { min: -90, max: 90 },
     },
     longitude: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DECIMAL(6, 4),
       allowNull: false,
       validate: { min: -180, max: 180 },
     },

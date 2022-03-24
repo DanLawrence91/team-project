@@ -8,17 +8,17 @@ const userData = require("./userData.json");
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
+  await Location.bulkCreate(locationData, {
+    individualHooks: true,
+    returning: true,
+  });
+
   await Team.bulkCreate(teamData, {
     individualHooks: true,
     returning: true,
   });
 
   await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
-  });
-
-  await Location.bulkCreate(locationData, {
     individualHooks: true,
     returning: true,
   });
