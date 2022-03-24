@@ -29,7 +29,6 @@ LocationReview.belongsTo(Location, {
 // Location can have more than one team
 Location.hasMany(Team, {
   foreignKey: "location_id",
-  onDelete: "CASCADE",
 });
 
 // teams belong to the location they are located in
