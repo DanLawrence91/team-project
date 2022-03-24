@@ -1,47 +1,47 @@
 [
   {
-    "location": "London",
-    "latitude": ,
-    "longitude":
+    "location_name": "London",
+    "latitude": 51.5072,
+    "longitude": 0.1276
   },
   {
-    "location": "Manchester",
-    "latitude": ,
-    "longitude":
+    "location_name": "Manchester",
+    "latitude": 53.4808,
+    "longitude": 2.2426
   },
   {
-    "location": "Birmingham",
-    "latitude": ,
-    "longitude":
+    "location_name": "Midlands",
+    "latitude": 52.4862,
+    "longitude": 1.8904
   },
   {
-    "location": "Newcastle",
-    "latitude": ,
-    "longitude":
+    "location_name": "Newcastle",
+    "latitude": 54.9783,
+    "longitude": 1.6178
   },
   {
-    "location": "Leeds",
-    "latitude": ,
-    "longitude":
+    "location_name": "Leeds",
+    "latitude": 53.8008,
+    "longitude": 1.5491
   },
   {
-    "location": "Liverpool",
-    "latitude": ,
-    "longitude":
+    "location_name": "Liverpool",
+    "latitude": 53.4084,
+    "longitude": 2.9916
   },
   {
-    "location": "Norwich",
-    "latitude": ,
-    "longitude":
+    "location_name": "Norwich",
+    "latitude": 52.6293,
+    "longitude": -1.2979
   },
   {
-    "location": "Southampton",
-    "latitude": ,
-    "longitude":
+    "location_name": "Southampton",
+    "latitude": 50.9105,
+    "longitude": 1.4049
   },
   {
-    "location": "Brighton",
-    "latitude": ,
-    "longitude":
+    "location_name": "Brighton",
+    "latitude": 50.8229,
+    "longitude": 0.1363
   }
 ]
