@@ -1,3 +1,4 @@
+<h1>{{team_name}}</h1>
 <div class="col mt-4">
   <div class="col-md-6">
     <!-- {{!-- termimage --}} -->
@@ -26,14 +27,15 @@
 
 <!-- {{!-- Comment detail--}} -->
 <div class="col mt-4">
-  {{#if commentList.length}}
+  {{#if teamReview.length}}
     <h4>Reviews</h4>
     <div class="col-md-6 project-list">
-      {{#each commentList as |commentList|}}
+      {{#each teamReviews as |teamReview|}}
         <div class="row mb-2">
           <div class="col-md-8">
-            <h3>{{reviewList.name}}</h3>
-            <h4><a href="/event/{{reviewList.name}}">{{reviewList.content}}</a></h4>
+            <h3>{{teamReview.review_score}}</h3>
+            <h4>{{teamReview.content}}</h4>
+            <p>Written by: {{user.first_name}} {{user.last_name}}</p>
           </div>
         </div>
       {{/each}}

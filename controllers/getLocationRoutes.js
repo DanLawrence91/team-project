@@ -18,9 +18,9 @@ router.get("/:id", withAuth, async (req, res) => {
       ],
     });
 
-    const locReviews = locRevData.get({ plain: true });
+    const locationReviews = locRevData.get({ plain: true });
     res.render("locationReviews", {
-      ...locReviews,
+      ...locationReviews,
       logged_in: true,
     });
   } catch (err) {
