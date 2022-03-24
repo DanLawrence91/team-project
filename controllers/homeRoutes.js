@@ -3,23 +3,23 @@ const withAuth = require("../utils/auth");
 const { LocationReview, User, Location, Team, TeamReview } = require("../models");
 
 // displays location reviews for that location
-router.get("/location-review/:id", withAuth, async (req, res) => {
+router.get("/location/:id", withAuth, async (req, res) => {
   try {
-    const locRevData = await LocationReview.findByPk(req.params.id, {
+    const locRevData = await Location.findByPk(req.params.id, {
       include: [
         {
           model: User,
           attributes: ["first_name", "last_name"],
         },
         {
-          model: Location,
-          attributes: ["location_name"],
+          model: LocationReview,
+          attributes: ["review_score", "content"],
         },
       ],
     });
 
     const locReview = locRevData.get({ plain: true });
-    res.render("locationReview", {
+    res.render("locationReviews", {
       ...locReview,
       logged_in: true,
     });
@@ -29,17 +29,17 @@ router.get("/location-review/:id", withAuth, async (req, res) => {
 });
 
 // displays team reviews for that team
-router.get("/team-review/:id", withAuth, async (req, res) => {
+router.get("/team/:id", withAuth, async (req, res) => {
   try {
-    const teamRevData = await TeamReview.findByPk(req.params.id, {
+    const teamRevData = await Team.findByPk(req.params.id, {
       include: [
         {
           model: User,
           attributes: ["first_name", "last_name"],
         },
         {
-          model: Team,
-          attributes: ["team_name"],
+          model: TeamReview,
+          attributes: ["review_score", "content"],
         },
       ],
     });
