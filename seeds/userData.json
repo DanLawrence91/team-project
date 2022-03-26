@@ -5,5 +5,19 @@
     "team_id": 9,
     "email": "dan@test.com",
     "password": "password"
+  },
+  {
+    "first_name": "Matt",
+    "last_name": "D'Sena",
+    "team_id": 1,
+    "email": "matt@test.com",
+    "password": "password"
+  },
+  {
+    "first_name": "Gan",
+    "last_name": "Hong",
+    "team_id": 4,
+    "email": "gan@test.com",
+    "password": "password"
   }
 ]
