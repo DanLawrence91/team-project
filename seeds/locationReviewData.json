@@ -1,0 +1,62 @@
+[
+  {
+    "user_id": 1,
+    "location_id": 1,
+    "review_score": 4,
+    "content": "Loved my visit here, loads of great places to eat and a really interesting city to visit"
+  },
+  {
+    "user_id": 2,
+    "location_id": 5,
+    "review_score": 5,
+    "content": "Great city with lovely history. A vibrant food and drink scene as well"
+  },
+  {
+    "user_id": 1,
+    "location_id": 2,
+    "review_score": 2,
+    "content": "I did not enjoy here, it was too busy!"
+  },
+  {
+    "user_id": 3,
+    "location_id": 1,
+    "review_score": 3,
+    "content": "There were some nice areas in the city but it wasn't mind-blowing"
+  },
+  {
+    "user_id": 2,
+    "location_id": 2,
+    "review_score": 4,
+    "content": "Nice place to visit for the day and visited a lovely restaurant"
+  },
+  {
+    "user_id": 1,
+    "location_id": 3,
+    "review_score": 5,
+    "content": "Not sure why this place gets a bad name, great area with good shops and nightlife"
+  },
+  {
+    "user_id": 2,
+    "location_id": 7,
+    "review_score": 1,
+    "content": "Nothing to do here, was pretty boring"
+  },
+  {
+    "user_id": 3,
+    "location_id": 4,
+    "review_score": 4,
+    "content": "Great people and great city"
+  },
+  {
+    "user_id": 3,
+    "location_id": 8,
+    "review_score": 2,
+    "content": "Was ok but nothing major happening here"
+  },
+  {
+    "user_id": 1,
+    "location_id": 9,
+    "review_score": 4,
+    "content": "Was nice to be by the seaside and the pier"
+  }
+]

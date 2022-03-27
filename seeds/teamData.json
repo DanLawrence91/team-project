@@ -1,122 +1,82 @@
 [
   {
     "location_id": 1,
-    "team_name": "Arsenal",
-    "latitude": 51.5549,
-    "longitude": 0.1084
+    "team_name": "Arsenal"
   },
   {
     "location_id": 3,
-    "team_name": "Aston Villa",
-    "latitude": 52.5091,
-    "longitude": 1.8848
+    "team_name": "Aston Villa"
   },
   {
     "location_id": 1,
-    "team_name": "Brentford",
-    "latitude": 51.4908,
-    "longitude": 0.2886
+    "team_name": "Brentford"
   },
   {
     "location_id": 9,
-    "team_name": "Brighton",
-    "latitude": 50.8616,
-    "longitude": 0.0837
+    "team_name": "Brighton"
   },
   {
     "location_id": 2,
-    "team_name": "Burnley",
-    "latitude": 53.7887,
-    "longitude": 2.2303
+    "team_name": "Burnley"
   },
   {
     "location_id": 1,
-    "team_name": "Chelsea",
-    "latitude": 51.4817,
-    "longitude": 0.191
+    "team_name": "Chelsea"
   },
   {
     "location_id": 1,
-    "team_name": "Crystal Palace",
-    "latitude": 51.398,
-    "longitude": 0.0861
+    "team_name": "Crystal Palace"
   },
   {
     "location_id": 6,
-    "team_name": "Everton",
-    "latitude": 53.4388,
-    "longitude": 2.9663
+    "team_name": "Everton"
   },
   {
     "location_id": 5,
-    "team_name": "Leeds United",
-    "latitude": 53.7778,
-    "longitude": 1.5721
+    "team_name": "Leeds United"
   },
   {
     "location_id": 3,
-    "team_name": "Leicester City",
-    "latitude": 52.6204,
-    "longitude": 1.1422
+    "team_name": "Leicester City"
   },
   {
     "location_id": 6,
-    "team_name": "Liverpool",
-    "latitude": 53.4308,
-    "longitude": 2.9608
+    "team_name": "Liverpool"
   },
   {
     "location_id": 2,
-    "team_name": "Manchester City",
-    "latitude": 53.4831,
-    "longitude": 2.2004
+    "team_name": "Manchester City"
   },
   {
     "location_id": 2,
-    "team_name": "Manchester United",
-    "latitude": 53.463,
-    "longitude": 2.2913
+    "team_name": "Manchester United"
   },
   {
     "location_id": 4,
-    "team_name": "Newcastle United",
-    "latitude": 54.9756,
-    "longitude": 1.6217
+    "team_name": "Newcastle United"
   },
   {
     "location_id": 7,
-    "team_name": "Norwich City",
-    "latitude": 52.6222,
-    "longitude": -1.3093
+    "team_name": "Norwich City"
   },
   {
     "location_id": 8,
-    "team_name": "Southampton",
-    "latitude": 50.9058,
-    "longitude": 1.391
+    "team_name": "Southampton"
   },
   {
     "location_id": 1,
-    "team_name": "Tottenham Hotspur",
-    "latitude": 51.6042,
-    "longitude": 0.0662
+    "team_name": "Tottenham Hotspur"
   },
   {
     "location_id": 1,
-    "team_name": "Watford",
-    "latitude": 51.6499,
-    "longitude": 0.4015
+    "team_name": "Watford"
   },
   {
     "location_id": 1,
-    "team_name": "West Ham",
-    "latitude": 51.5387,
-    "longitude": 0.0166
+    "team_name": "West Ham"
   },
   {
     "location_id": 3,
-    "team_name": "Wolves",
-    "latitude": 52.5902,
-    "longitude": 2.1304
+    "team_name": "Wolves"
   }
 ]
