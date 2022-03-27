@@ -39,7 +39,7 @@ router.get("/:id", withAuth, async (req, res) => {
   }
 });
 
-router.get("*", async (req, res) => {
+router.get("/:cityname", async (req, res) => {
   try {
     res.render("locationReviews");
   } catch (err) {
