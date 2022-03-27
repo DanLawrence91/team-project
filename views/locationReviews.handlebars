@@ -26,16 +26,15 @@
 
 <!-- {{!-- Comment detail--}} -->
 <div class="col mt-4">
-  {{#if commentList.length}}
     <h4>Reviews</h4>
     <div class="col-md-6 project-list">
-      {{#each commentList as |commentList|}}
+      {{#each locationReviews as |locationReview|}}
         <div class="row mb-2">
           <div class="col-md-8">
-            <h3>{{reviewList.name}}</h3>
-            <h4><a href="/event/{{reviewList.name}}">{{reviewList.content}}</a></h4>
+            <h3>{{locationReview.review_score}}</h3>
+            <h4>{{locationReview.content}}</h4>
+            <p>Written by: {{user.first_name}} {{user.last_name}}</p>
           </div>
         </div>
       {{/each}}
     </div>
-  {{/if}}

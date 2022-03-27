@@ -1,0 +1,56 @@
+[
+  {
+    "user_id": 1,
+    "team_id": 9,
+    "review_score": 5,
+    "content": "Great ground, brilliant atmosphere"
+  },
+  {
+    "user_id": 2,
+    "team_id": 1,
+    "review_score": 5,
+    "content": "Love this club as such a great new place to watch games"
+  },
+  {
+    "user_id": 3,
+    "team_id": 4,
+    "review_score": 4,
+    "content": "Great ground and set of fans"
+  },
+  {
+    "user_id": 1,
+    "team_id": 3,
+    "review_score": 2,
+    "content": "Poor ground, no fans, bad amenities"
+  },
+  {
+    "user_id": 2,
+    "team_id": 9,
+    "review_score": 4,
+    "content": "Enjoyed the game here, everyone very welcoming and good food at the ground"
+  },
+  {
+    "user_id": 3,
+    "team_id": 5,
+    "review_score": 4,
+    "content": "Great old fashioned ground right next to a local cricket club"
+  },
+  {
+    "user_id": 1,
+    "team_id": 1,
+    "review_score": 2,
+    "content": "Stadium was too new with no atmosphere, good amenities though"
+  },
+  {
+    "user_id": 2,
+    "team_id": 4,
+    "review_score": 4,
+    "content": "Had a nice day here with ground in a great spot"
+  },
+  {
+    "user_id": 3,
+    "team_id": 9,
+    "review_score": 2,
+    "content": "Found it hostile and did not enjoy the day"
+  }
+]
