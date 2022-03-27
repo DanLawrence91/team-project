@@ -1,28 +1,6 @@
 <h1>{{team_name}}</h1>
-<div class="col mt-4">
-  <div class="col-md-6">
-    <!-- {{!-- termimage --}} -->
-    <div class="card-body">
-      <div class="card mb-3">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Event Name</h5>
-          <p class="card-text">Some details or descriptions</p>
-          <p class="card-text"><small class="text-muted">May be comment rating here</small></p>
-        </div>
-      </div>
-    </div>
-
-    <form class="form new-project-form">
-      <div class="form-group">
-        <label for="comments">Put comments here:</label>
-        <textarea class="form-input w-100" type="text" id="comments" name="comments" rows="5"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Comment</button>
-      </div>
-    </form>
-  </div>
+<div class="col" id="result-content">
+{{!-- response content from apis --}}
 </div>
 
 <!-- {{!-- Comment detail--}} -->
@@ -40,4 +18,6 @@
         </div>
       {{/each}}
     </div>
-  
+</div>
+
+<script src="./public/js/teamscript.js"></script>
