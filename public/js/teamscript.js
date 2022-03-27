@@ -1,8 +1,8 @@
-const renderlist = document.querySelector('#result-content');
+const renderlist = document.querySelector('#team-content');
 // const choiceInfo = require('../seeds/locationData') // for getting the latitude and longitude from local json file
 
-const teamHandler = async (event) => {
-  event.preventDefault();
+const teamHandler = async () => {
+  // event.preventDefault();
 
   searchEveApi();
 
@@ -24,7 +24,7 @@ const teamHandler = async (event) => {
   
       // Get the query values which should be a city name or a team name like "manchester"
       var teamName = searchParamsArr.pop().trim().toLocaleLowerCase();
-      if (teamName == "arsenal") {
+      if (teamName == "1") { //arsenal
         return 57;
       } else if (teamName == "astonvilla") {
         return 58;
@@ -103,4 +103,6 @@ const teamHandler = async (event) => {
   }
 }
 
-window.addEventListener("load", teamHandler)
+teamHandler();
+// window.addEventListener("load", teamHandler);
+// renderlist.onload(teamHandler);
