@@ -43,7 +43,6 @@ const signupFormHandler = async (event) => {
         for (i = 0; i < 20; i++) {
             let teamIdCheck = modalList.children[i].children[0];
             if (teamIdCheck.checked) {
-                // console.log(teamIdCheck);
                 return teamIdCheck.value;
             }
         }
@@ -54,8 +53,8 @@ const signupFormHandler = async (event) => {
     if (firstName && lastName && teamId && email && password) {
       const response = await fetch('/api/user', {
         method: 'POST',
-        body: JSON.stringify({ firstName, lastName, teamId, email, password })
-        // headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ firstName, lastName, teamId, email, password }),
+        headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
