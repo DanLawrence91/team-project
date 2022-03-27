@@ -14,7 +14,7 @@ const { User, Team, TeamReview } = require("../models");
 // });
 
 // displays team reviews for that team
-router.get("/:id", withAuth, async (req, res) => {
+router.get("/:id/:team_name", withAuth, async (req, res) => {
   try {
     const teamRevData = await Team.findByPk(req.params.id, {
       include: [
@@ -39,12 +39,12 @@ router.get("/:id", withAuth, async (req, res) => {
   }
 });
 
-router.get("*", async (req, res) => {
-  try {
-    res.render("teamReviews");
-  } catch (err) {
-    res.status(500).json(err);
-  }
-})
+// router.get("*", async (req, res) => {
+//   try {
+//     res.render("teamReviews");
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// })
 
 module.exports = router;
