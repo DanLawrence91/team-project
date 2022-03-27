@@ -7,6 +7,9 @@
     <title>Sport Lover Homepage</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/style.css" />
+        <!-- Gsap and Script-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js" defer></script>
+        <script src="script.js" defer></script>
   </head>
   <body>
     <header>
@@ -56,7 +59,7 @@
           <div class="col-10 card custom-card my-5">
             <!-- may try and have an image here either from API or generic football ground -->
             <img class="card-img-top" src="./images/football1.jpg" alt="Potential football stadium image" />
-            <div class="hidden">
+            <div class=>
               <!-- can use models in handlebars so only need one line of code and will put each location and team in depending on what is chosen -->
               <div class="card-body custom-card-content">
                 <h4 class="card-title">Locations:</h4>
@@ -92,6 +95,29 @@
           </div>
         </div>
       </section>
+      <div class="intro">click on buttons </div>
+      <ul class="button-ul">
+          <li class="button-li" data-active=".a1">button a1</li>
+          <li class="button-li" data-active=".a2">Button a2</li>
+        </ul>
+      
+        <div class="items">
+          <div class="item a1">a1</div>
+          <div class="item a1">a1</div>
+          <div class="item a1">a1</div>
+          <div class="item a1">a1</div>
+          <div class="item a2">a2</div>
+          <div class="item a2">a2</div>
+          <div class="item a2">a2</div>
+          <div class="item a2">a2</div>
+          <div class="item a2">a2</div>
+          <div class="item a2">a2</div>
+      
+        </div>
+
+
+
+        
     </main>
     <footer></footer>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
