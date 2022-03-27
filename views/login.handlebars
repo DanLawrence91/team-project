@@ -12,7 +12,7 @@
         <input type="password" class="form-control" id="password-login" placeholder="Password here" />
       </div>
     </form>
-    <a href="#!" class="btn btn-primary">Login</a>
+    <button class="btn btn-primary" id="loginBtn">Login</button>
   </article>
   <article class="col-6">
     <h2>Sign-up</h2>
@@ -32,7 +32,7 @@
       </div>
       <div class="form-group">
         <label for="password-login">Password</label>
-        <input type="password" class="form-control" id="password-login" placeholder="Password here" />
+        <input type="password" class="form-control" id="password-signup" placeholder="Password here" />
       </div>
       <!-- Button trigger modal -->
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#team-modal">Choose your favourite team</button>
@@ -46,7 +46,7 @@
                 <span aria-hidden="true">×</span>
               </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" id="modalList">
               <div class="custom-control custom-radio">
                 <input type="radio" id="team1" name="team-list" class="custom-control-input" value="1" />
                 <label class="custom-control-label" for="team1">Arsenal</label>
@@ -130,13 +130,13 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save team</button>
+              <button type="button" class="btn btn-primary" id="teamPreference">Save team</button>
             </div>
           </div>
         </div>
       </div>
     </form>
-    <a href="#!" class="btn btn-primary my-2">Sign-up</a>
+    <button class="btn btn-primary my-2" id="signupBtn">Sign-up</button>
   </article>
 </section>
 

@@ -14,7 +14,7 @@ const { LocationReview, User, Location } = require("../models");
 // });
 
 // displays location reviews for that location
-router.get("/:id", withAuth, async (req, res) => {
+router.get("/:id/:location_name", withAuth, async (req, res) => {
   try {
     const locRevData = await Location.findByPk(req.params.id, {
       include: [
@@ -38,5 +38,16 @@ router.get("/:id", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// router.get("/:cityname", async (req, res) => {
+//   try {
+//     res.render("locationReviews", {
+//       ...locationReviews,
+//       logged_in: true,
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// })
 
 module.exports = router;
