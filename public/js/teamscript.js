@@ -107,3 +107,52 @@ const teamHandler = async () => {
 teamHandler();
 // window.addEventListener("load", teamHandler);
 // renderlist.onload(teamHandler);
+
+
+
+const reviewPostHandler = async (event) => {
+  event.preventDefault();
+
+  let searchParamsArr = window.location.href.split('/');
+  // console.log(searchParamsArr);
+  let team_id = parseInt(searchParamsArr.at(-2));
+  console.log(team_id);
+
+  function getChoice() {
+    const ratingList = document.querySelector('#ratingList');
+    console.log(ratingList);
+    for (let i = 0; i < 10; i=i+2) {
+      let ratingSelected = ratingList.children[i];
+      if (ratingSelected.checked) {
+        // console.log(ratingSelected);
+        return ratingSelected.value;
+      }
+    }
+  }
+  let review_score = getChoice();
+  // console.log(typeof review_score);
+
+  let content = document.querySelector('#newReview').value.trim();
+
+  if (team_id && review_score && content) {
+    // Send a POST request to the API endpoint
+    const response = await fetch('/api/team-review', {
+      method: 'POST',
+      body: JSON.stringify({ team_id, review_score, content }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      // If successful, redirect the browser to the profile page
+      document.location.reload();
+      console.log(response);
+    } else {
+      alert(response.statusText);
+    }
+  }
+};
+
+document
+  .querySelector('#reviewBtn')
+  .addEventListener('click', reviewPostHandler);
+

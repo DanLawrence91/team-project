@@ -6,7 +6,7 @@ router.post("/", withAuth, async (req, res) => {
   try {
     const newTReview = await TeamReview.create({
       user_id: req.session.user_id,
-      team_id: req.body.id,
+      team_id: req.body.team_id,
       review_score: req.body.review_score,
       content: req.body.content,
     });
