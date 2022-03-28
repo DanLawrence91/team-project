@@ -33,10 +33,6 @@
   text-align: left;
 }
 
-.hidden {
-  display: none;
-}
-
 html {
   font-size: 20px;
 }
@@ -50,7 +46,7 @@ html {
 }
 
 .custom-bkg {
-  background: rgba(248, 247, 247, 0.4);
+  background: rgba(29, 27, 27, 0.801);
 }
 .custom-bkg1 {
   background: rgba(0, 0, 0, 0);
@@ -90,7 +86,8 @@ html {
 
 .images {
   margin: auto;
-  width: 500px;
+  width: 400px;
+  height: 300px;
 }
 
 .heading {

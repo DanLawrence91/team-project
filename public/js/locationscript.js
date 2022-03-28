@@ -41,7 +41,7 @@ const locationHandler = async (event) => {
             console.log(res);
             // let latitude = res.coord.lat;
             // let longitude = res.coord.lon;
-            let resUrl = `https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng?latitude=${res.coord.lat}&longitude=${res.coord.lon}&limit=20`;
+            let resUrl = `https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng?latitude=${res.coord.lat}&longitude=${res.coord.lon}&limit=7`;
             // console.log(resUrl);
             getLocationDetail(resUrl);
           });
@@ -85,7 +85,7 @@ const locationHandler = async (event) => {
 
       function printResResults(stringInfo) {
         renderlistLoc.innerHTML += `
-          <div class="col">
+          <div class="col-6">
             <div class="card custom-bkg2">
               <img src="${stringInfo.photo.images.medium.url}" class="images p-4" alt="${stringInfo.name} image">
               <h5 class="text-center">${stringInfo.name}</h5>
