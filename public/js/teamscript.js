@@ -24,7 +24,7 @@ const teamHandler = async () => {
   
       // Get the query values which should be a city name or a team name like "manchester"
       var teamName = searchParamsArr.pop().trim().toLocaleLowerCase();
-      if (teamName == "1") { //arsenal
+      if (teamName == "arsenal") { //arsenal
         return 57;
       } else if (teamName == "astonvilla") {
         return 58;

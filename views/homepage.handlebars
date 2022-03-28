@@ -39,7 +39,7 @@
 
           {{#each teams as |team|}}
             <p class="m-4">
-              <a class="btn btn-primary btn-lg custom-btn custom-search" href="/team/{{team.id}}" role="button">{{team.team_name}}</a>
+              <a class="btn btn-primary btn-lg custom-btn custom-search" href="/team/{{team.id}}/{{team.team_name}}" role="button">{{team.team_name}}</a>
             </p>
           {{/each}}
         </div>
