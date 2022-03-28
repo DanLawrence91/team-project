@@ -18,6 +18,8 @@ router.get("/", async (req, res) => {
   }
 });
 
+//have commented out the login for now because other wise its looking for a logged in user and not getting the route
+
 router.get('/dashboard', (req, res) => {
   // if (req.session.logged_in) {
     res.render('dashboard');
