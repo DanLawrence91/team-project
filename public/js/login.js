@@ -18,8 +18,10 @@ const loginFormHandler = async (event) => {
       // If successful, redirect the browser to the profile page
       document.location.replace("/");
     } else {
-      alert(response.statusText);
+      alert("Incorrect username or password");
     }
+  } else {
+    alert("You must enter both username and password");
   }
 };
 

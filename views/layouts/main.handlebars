@@ -6,8 +6,6 @@
     <title>Sport Lover</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
     <link rel="stylesheet" href="/css/style.css" />
-    <!-- Gsap and Script-->
-
   </head>
   <body>
     <header>
@@ -25,11 +23,11 @@
           </ul>
           <!-- need to add handlebars for if logged in or if logged out which will change this -->
           {{#if logged_in}}
-            <div class="d-inline my-2 my-lg-0">
-              <button class="nav-link" id="logout">Logout</button>
+            <div class="d-inline my-2 my-lg-0 log">
+              <a class="nav-link" id="logout">Logout</a>
             </div>
           {{else}}
-            <div class="d-inline my-2 my-lg-0">
+            <div class="d-inline my-2 my-lg-0 log">
               <a class="nav-link" href="/login">Login</a>
             </div>
           {{/if}}
@@ -44,7 +42,6 @@
     {{#if logged_in}}
       <script src="/js/logout.js"></script>
     {{/if}}
-    {{! logout js file needs to go here if logged in }}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
     <script src="/script.js"></script>
