@@ -112,14 +112,17 @@ const reviewPostHandler = async (event) => {
   event.preventDefault();
 
   let searchParamsArr = window.location.href.split("/");
+
   // console.log(searchParamsArr);
   let team_id = parseInt(searchParamsArr.at(-2));
   console.log(team_id);
 
   function getChoice() {
+
     const ratingList = document.querySelector("#ratingList");
     console.log(ratingList);
     for (let i = 0; i < 10; i = i + 2) {
+
       let ratingSelected = ratingList.children[i];
       if (ratingSelected.checked) {
         // console.log(ratingSelected);
@@ -130,6 +133,7 @@ const reviewPostHandler = async (event) => {
   let review_score = getChoice();
   // console.log(typeof review_score);
 
+
   let content = document.querySelector("#newReview").value.trim();
 
   if (team_id && review_score && content) {
@@ -138,6 +142,7 @@ const reviewPostHandler = async (event) => {
       method: "POST",
       body: JSON.stringify({ team_id, review_score, content }),
       headers: { "Content-Type": "application/json" },
+
     });
 
     if (response.ok) {
@@ -151,3 +156,4 @@ const reviewPostHandler = async (event) => {
 };
 
 document.querySelector("#reviewBtn").addEventListener("click", reviewPostHandler);
+
