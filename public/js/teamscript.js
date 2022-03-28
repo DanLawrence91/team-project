@@ -95,10 +95,10 @@ const teamHandler = async () => {
   function printEveResults(stringInfo) {
     renderlist.innerHTML += `
     <div class="col">
-      <div class="card">
-        <h5>Hometeam: ${stringInfo.homeTeam.name}</h5>
-        <h5>Awayteam: ${stringInfo.awayTeam.name}</h5>
-        <p>UTC date: ${stringInfo.utcDate}</p>
+      <div class="card custom-bkg2 p-2">
+        <h5 class="text-center">Home Team: ${stringInfo.homeTeam.name}</h5>
+        <h5 class="text-center">Away Team: ${stringInfo.awayTeam.name}</h5>
+        <p class="text-center">UTC date: ${stringInfo.utcDate}</p>
       </div>
     </div>`;
   }

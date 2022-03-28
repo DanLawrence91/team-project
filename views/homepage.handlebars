@@ -1,45 +1,45 @@
-<section class="jumbotron">
+<section class="jumbotron custom-bkg">
   <!-- will change this greeting in handlebars to show user's first name or username -->
 
-  <h1 class="display-3">Hello!</h1>
+  <h1 class="display-3 custom-text">Hello!</h1>
 
-  <p class="lead">
+  <p class="lead custom-text">
     Welcome to the Sport Lover homepage. From here you can either search via a location you would like to visit of a team in the Premier League, or you can search for your favourite team and see upcoming fixtures and local restaurants
   </p>
-  <hr class="my-5" />
-  <p class="jumbo-text">Please select one of the buttons below to begin your search!</p>
+  <hr class="my-2" />
+  <p class="jumbo-text custom-text">Please select one of the buttons below to begin your search!</p>
   <div class="d-flex justify-content-around mt-5">
     <p class="lead d-inline">
-      <a class="btn btn-primary btn-lg custom-btn" href="#locationlist" role="button">Location</a>
+      <a class="btn btn-primary btn-lg custom-btn custom-text" href="#locationlist" role="button">Location</a>
     </p>
     <p class="lead d-inline">
-      <a class="btn btn-primary btn-lg custom-btn" href="#teamlist" role="button">Team</a>
+      <a class="btn btn-primary btn-lg custom-btn custom-text" href="#teamlist" role="button">Team</a>
     </p>
   </div>
 </section>
-<section class="container">
+<section class="container custom-bkg1">
   <div class="row">
-    <div class="col-10 card custom-card my-5">
-      <img class="card-img-top" src="/images/football1.jpg" alt="Wembley stadium image" />
-      <div class="card-body custom-card-content">
+    <div class="col-10 card custom-card my-5 custom-bkg1">
+
+      <div class="card-body custom-card-content custom-bkg">
 
         <div>
-          <h4 class="card-title" id="locationlist">Locations:</h4>
+          <h4 class="card-title custom-text" id="locationlist">Locations:</h4>
 
           {{#each locations as |location|}}
             <p class="m-4">
-              <a class="btn btn-primary btn-lg custom-btn custom-search" href="/location/{{location.id}}/{{location.location_name}}" role="button">{{location.location_name}}</a>
+              <a class="btn btn-primary btn-lg custom-btn custom-search custom-text" href="/location/{{location.id}}/{{location.location_name}}" role="button">{{location.location_name}}</a>
             </p>
 
           {{/each}}
         </div>
 
         <div>
-          <h4 class="card-title" id="teamlist">Teams:</h4>
+          <h4 class="card-title custom-text" id="teamlist">Teams:</h4>
 
           {{#each teams as |team|}}
             <p class="m-4">
-              <a class="btn btn-primary btn-lg custom-btn custom-search" href="/team/{{team.id}}/{{team.team_name}}" role="button">{{team.team_name}}</a>
+              <a class="btn btn-primary btn-lg custom-btn custom-search custom-text" href="/team/{{team.id}}/{{team.team_name}}" role="button">{{team.team_name}}</a>
             </p>
           {{/each}}
         </div>
