@@ -134,7 +134,7 @@ const reviewPostHandler = async (event) => {
 
   if (team_id && review_score && content) {
     // Send a POST request to the API endpoint
-    const response = await fetch('/api/location-review', {
+    const response = await fetch('/api/team-review', {
       method: 'POST',
       body: JSON.stringify({ team_id, review_score, content }),
       headers: { 'Content-Type': 'application/json' },
