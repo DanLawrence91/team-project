@@ -1,4 +1,19 @@
 <!-- trying to get DashBoard to work -->
-    <main class="container container-fluid mt-5">
-      {{{body}}}
-    </main>
+  <div>
+
+    <h1>{{firstname}}This is dashboard</h1>
+    </div>
+  {{#each LocationReview as |review|}}
+            <p class="m-4">
+              <a class="btn btn-primary btn-lg custom-btn custom-search" href="" role="button">{{review.content}}{{review.review_score}}</a>
+            </p>
+
+          {{/each}}
+<!-- trying to get DashBoard to work
+            {{#each teamReviews as |review|}}
+            <p class="m-4">
+              <a class="btn btn-primary btn-lg custom-btn custom-search" href="" role="button">{{review.content}}{{review.review_score}}</a>
+            </p>
+
+          {{/each}} -->
+          
