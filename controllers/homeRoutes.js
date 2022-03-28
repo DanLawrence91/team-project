@@ -12,6 +12,7 @@ router.get("/", async (req, res) => {
     res.render("homepage", {
       teams,
       locations,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -20,9 +21,9 @@ router.get("/", async (req, res) => {
 
 //have commented out the login for now because other wise its looking for a logged in user and not getting the route
 
-router.get('/dashboard', (req, res) => {
+router.get("/dashboard", (req, res) => {
   if (req.session.logged_in) {
-    res.render('dashboard');
+    res.render("dashboard");
     return;
   }
 });
@@ -37,7 +38,5 @@ router.get("/login", (req, res) => {
   // needs to be login handlebars name here
   res.render("login");
 });
-
-
 
 module.exports = router;
