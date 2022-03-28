@@ -1,4 +1,4 @@
-<h1>{{team_name}}</h1>
+<h2 class="custom-text1">{{team_name}}</h2>
 <div class="col" id="team-content">
 </div>
 
@@ -15,19 +15,37 @@
   <button id="reviewBtn">Comment</button>
 </div>
 
+<div class="col custom-bkg2 my-3 p-2">
+  <h3>Comment here if you'd like</h3>
+  <textarea class="w-100" type="text" id="newReview" rows="5"></textarea>
+  <div class="rating" id="ratingList"> 
+    <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label></input>
+    <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label></input>
+    <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label></input>
+    <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label></input>
+    <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label></input>
+  </div>
+  <button id="reviewBtn">Comment</button>
+</div>
+
 <!-- {{!-- Comment detail--}} -->
-<div class="col mt-4">
+<div class="col mt-4 custom-bkg2">
 
   <h4>Reviews</h4>
-  <div class="col-md-6 project-list">
+  <div class="project-list">
     {{#each teamReviews as |teamReview|}}
       <div class="row mb-2">
-        <div class="col-md-8">
-          <h3>{{teamReview.review_score}}</h3>
-          <h4>{{teamReview.content}}</h4>
-          <p>Written by: {{user.firstname}} {{user.lastname}}</p>
+
+        <div class="w-100">
+          <div class="d-flex justify-content-between px-4">
+            <p class="d-inline">{{teamReview.content}}</p>
+            <p class="d-inline">{{teamReview.review_score}} out of 5</p>
+          </div>
+          <p class="px-4">Written by: {{user.firstname}} {{user.lastname}}</p>
+          <hr />
         </div>
       </div>
+
     {{/each}}
   </div>
 </div>
