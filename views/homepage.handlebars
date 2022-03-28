@@ -10,10 +10,10 @@
   <p class="jumbo-text custom-text">Please select one of the buttons below to begin your search!</p>
   <div class="d-flex justify-content-around mt-5">
     <p class="lead d-inline">
-      <a class="btn btn-primary btn-lg custom-btn custom-text" href="#locationlist" role="button">Location</a>
+      <a class="btn btn-success btn-lg custom-btn custom-text" href="#locationlist" role="button"><i class="fa-solid fa-map-pin"> Location</i></a>
     </p>
     <p class="lead d-inline">
-      <a class="btn btn-primary btn-lg custom-btn custom-text" href="#teamlist" role="button">Team</a>
+      <a class="btn btn-success btn-lg custom-btn custom-text" href="#teamlist" role="button"><i class="fa-solid fa-futbol"> Team</i></a>
     </p>
   </div>
 </section>
@@ -28,7 +28,7 @@
 
           {{#each locations as |location|}}
             <p class="m-4">
-              <a class="btn btn-primary btn-lg custom-btn custom-search custom-text" href="/location/{{location.id}}/{{location.location_name}}" role="button">{{location.location_name}}</a>
+              <a class="btn btn-success btn-lg custom-btn custom-search custom-text" href="/location/{{location.id}}/{{location.location_name}}" role="button"><i class="fa-solid fa-map-pin"> {{location.location_name}}</i></a>
             </p>
 
           {{/each}}
@@ -39,7 +39,7 @@
 
           {{#each teams as |team|}}
             <p class="m-4">
-              <a class="btn btn-primary btn-lg custom-btn custom-search custom-text" href="/team/{{team.id}}/{{team.team_name}}" role="button">{{team.team_name}}</a>
+              <a class="btn btn-success btn-lg custom-btn custom-search custom-text" href="/team/{{team.id}}/{{team.team_name}}" role="button"><i class="fa-solid fa-futbol"> {{team.team_name}}</i></a>
             </p>
           {{/each}}
         </div>
