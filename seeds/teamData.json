@@ -5,7 +5,7 @@
   },
   {
     "location_id": 3,
-    "team_name": "Aston Villa"
+    "team_name": "AstonVilla"
   },
   {
     "location_id": 1,
@@ -25,7 +25,7 @@
   },
   {
     "location_id": 1,
-    "team_name": "Crystal Palace"
+    "team_name": "CrystalPalace"
   },
   {
     "location_id": 6,
@@ -33,11 +33,11 @@
   },
   {
     "location_id": 5,
-    "team_name": "Leeds United"
+    "team_name": "LeedsUnited"
   },
   {
     "location_id": 3,
-    "team_name": "Leicester City"
+    "team_name": "LeicesterCity"
   },
   {
     "location_id": 6,
@@ -45,19 +45,19 @@
   },
   {
     "location_id": 2,
-    "team_name": "Manchester City"
+    "team_name": "ManchesterCity"
   },
   {
     "location_id": 2,
-    "team_name": "Manchester United"
+    "team_name": "ManchesterUnited"
   },
   {
     "location_id": 4,
-    "team_name": "Newcastle United"
+    "team_name": "NewcastleUnited"
   },
   {
     "location_id": 7,
-    "team_name": "Norwich City"
+    "team_name": "NorwichCity"
   },
   {
     "location_id": 8,
@@ -65,7 +65,7 @@
   },
   {
     "location_id": 1,
-    "team_name": "Tottenham Hotspur"
+    "team_name": "TottenhamHotspur"
   },
   {
     "location_id": 1,
@@ -73,7 +73,7 @@
   },
   {
     "location_id": 1,
-    "team_name": "West Ham"
+    "team_name": "WestHam"
   },
   {
     "location_id": 3,
