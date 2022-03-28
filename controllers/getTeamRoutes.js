@@ -23,7 +23,7 @@ router.get("/:id/:team_name", withAuth, async (req, res) => {
           attributes: ["review_score", "content"],
           include: {
             model: User,
-            attributes: { exclude: ["password"], include: ["first_name", "last_name"] },
+            attributes: { exclude: ["password"], include: ["firstname", "lastname"] },
           },
         },
       ],

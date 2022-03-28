@@ -12,133 +12,35 @@
         <input type="password" class="form-control" id="password-login" placeholder="Password here" />
       </div>
     </form>
-    <button class="btn btn-primary" id="loginBtn">Login</button>
+    <button class="btn btn-primary" id="loginBtn" type="submit">Login</button>
   </article>
   <article class="col-6">
     <h2>Sign-up</h2>
 
-    <form>
+    <form id="signup-form">
       <div class="form-group">
         <label for="first-name-signup">First Name</label>
-        <input type="text" class="form-control" id="first-name-signup" placeholder="First Name" />
+        <input type="text" class="form-control" id="firstname" placeholder="First Name" />
       </div>
       <div class="form-group">
         <label for="last-name-signup">Last Name</label>
-        <input type="text" class="form-control" id="last-name-signup" placeholder="Last Name" />
+        <input type="text" class="form-control" id="lastname" placeholder="Last Name" />
       </div>
       <div class="form-group">
         <label for="email-signup">Email</label>
-        <input type="text" class="form-control" id="email-signup" placeholder="youremail@here.com" />
+        <input type="text" class="form-control" id="email" placeholder="youremail@here.com" />
       </div>
       <div class="form-group">
         <label for="password-login">Password</label>
-        <input type="password" class="form-control" id="password-signup" placeholder="Password here" />
+        <input type="password" class="form-control" id="password" placeholder="Password here" />
       </div>
-      <!-- just commenting out the favourite team for now
-      <!-- Button trigger modal 
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#team-modal">Choose your favourite team</button> 
 
-      <!-- Modal 
-      <div class="modal fade" id="team-modal" tabindex="-1" role="dialog" aria-labelledby="team-modal-label" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">×</span>
-              </button>
-            </div>
-            <div class="modal-body" id="modalList">
-              <div class="custom-control custom-radio">
-                <input type="radio" id="team1" name="team-list" class="custom-control-input" value="1" />
-                <label class="custom-control-label" for="team1">Arsenal</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="team2" name="team-list" class="custom-control-input" value="2" />
-                <label class="custom-control-label" for="team2">Aston Villa</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="team3" name="team-list" class="custom-control-input" value="3" />
-                <label class="custom-control-label" for="team3">Brentford</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="team4" name="team-list" class="custom-control-input" value="4" />
-                <label class="custom-control-label" for="team4">Brighton</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="team5" name="team-list" class="custom-control-input" value="5" />
-                <label class="custom-control-label" for="team5">Burnley</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="team6" name="team-list" class="custom-control-input" value="6" />
-                <label class="custom-control-label" for="team6">Chelsea</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="team7" name="team-list" class="custom-control-input" value="7" />
-                <label class="custom-control-label" for="team7">Crystal Palace</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="team8" name="team-list" class="custom-control-input" value="8" />
-                <label class="custom-control-label" for="team8">Everton</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="team9" name="team-list" class="custom-control-input" value="9" />
-                <label class="custom-control-label" for="team9">Leeds United</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="team10" name="team-list" class="custom-control-input" value="10" />
-                <label class="custom-control-label" for="team10">Leicester City</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="team11" name="team-list" class="custom-control-input" value="11" />
-                <label class="custom-control-label" for="team11">Liverpool</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="team12" name="team-list" class="custom-control-input" value="12" />
-                <label class="custom-control-label" for="team12">Manchester City</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="team13" name="team-list" class="custom-control-input" value="13" />
-                <label class="custom-control-label" for="team13">Manchester United</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="team14" name="team-list" class="custom-control-input" value="14" />
-                <label class="custom-control-label" for="team14">Newcastle United</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="team15" name="team-list" class="custom-control-input" value="15" />
-                <label class="custom-control-label" for="team15">Norwich City</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="team16" name="team-list" class="custom-control-input" value="16" />
-                <label class="custom-control-label" for="team16">Southampton</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="team17" name="team-list" class="custom-control-input" value="17" />
-                <label class="custom-control-label" for="team17">Tottenham Hotspur</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="team18" name="team-list" class="custom-control-input" value="18" />
-                <label class="custom-control-label" for="team18">Watford</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="team19" name="team-list" class="custom-control-input" value="19" />
-                <label class="custom-control-label" for="team19">West Ham</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="team20" name="team-list" class="custom-control-input" value="20" />
-                <label class="custom-control-label" for="team20">Wolves</label>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" data-dismiss="modal">Save team</button>
-            </div>
-          </div>
-        </div>
-      </div> -->
+
+      <button class="btn btn-primary my-2" id="signupBtn" type="submit">Sign-up</button>
+
     </form>
-    <button class="btn btn-primary my-2" id="signupBtn">Sign-up</button>
+
   </article>
 </section>
 
-<script src="/js/login.js"></script>
+<script src="./js/login.js"></script>
