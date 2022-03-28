@@ -1,71 +1,54 @@
-
 // login section
 const loginFormHandler = async (event) => {
-    event.preventDefault();
+  event.preventDefault();
 
-    // Collect values from the login form
-    let email = document.querySelector('#email-login').value.trim();
-    let password = document.querySelector('#password-login').value.trim();
+  // Collect values from the login form
+  const email = document.querySelector("#email-login").value.trim();
+  const password = document.querySelector("#password-login").value.trim();
 
-    if (email && password) {
-        // Send a POST request to the API endpoint
-        const response = await fetch('/api/user/login', {
-        method: 'POST',
-        body: JSON.stringify({ email, password }),
-        headers: { 'Content-Type': 'application/json' },
-        });
+  if (email && password) {
+    // Send a POST request to the API endpoint
+    const response = await fetch("/api/user/login", {
+      method: "POST",
+      body: JSON.stringify({ email, password }),
+      headers: { "Content-Type": "application/json" },
+    });
 
-        if (response.ok) {
-        // If successful, redirect the browser to the profile page
-        document.location.replace('/');
-        } else {
-        alert(response.statusText);
-        }
+    if (response.ok) {
+      // If successful, redirect the browser to the profile page
+      document.location.replace("/");
+    } else {
+      alert(response.statusText);
     }
+  }
 };
 
-document
-.querySelector('#loginBtn')
-.addEventListener('click', loginFormHandler);
+document.querySelector("#loginBtn").addEventListener("click", loginFormHandler);
 
 // sign-up section
 const signupFormHandler = async (event) => {
-    event.preventDefault();
-  
-    const firstName = document.querySelector('#first-name-signup').value.trim();
-    // console.log(firstName);
-    const lastName = document.querySelector('#last-name-signup').value.trim();
-    const email = document.querySelector('#email-signup').value.trim();
-    const password = document.querySelector('#password-signup').value.trim();
+  event.preventDefault();
 
-    function getChoice() {
-        const modalList = document.querySelector('#modalList');
-        // console.log(modalList.children[0].children);
-        for (i = 0; i < 20; i++) {
-            let teamIdCheck = modalList.children[i].children[0];
-            if (teamIdCheck.checked) {
-                return teamIdCheck.value;
-            }
-        }
+  const firstname = document.querySelector("#firstname").value.trim();
+  const lastname = document.querySelector("#lastname").value.trim();
+  const email = document.querySelector("#email").value.trim();
+  const password = document.querySelector("#password").value.trim();
+
+  if (firstname && lastname && email && password) {
+    const response = await fetch("/api/user", {
+      method: "POST",
+      body: JSON.stringify({ firstname, lastname, email, password }),
+      headers: { "Content-Type": "application/json" },
+    });
+
+    if (response.ok) {
+      document.location.replace("/"); //disable back navigation by backspace
+    } else {
+      alert(response.statusText);
     }
-    let teamId = getChoice();
-    console.log(teamId);
-  
-    if (firstName && lastName && teamId && email && password) {
-      const response = await fetch('/api/user', {
-        method: 'POST',
-        body: JSON.stringify({ firstName, lastName, teamId, email, password }),
-        headers: { 'Content-Type': 'application/json' },
-      });
-  
-      if (response.ok) {
-        document.location.replace('/'); //disable back navigation by backspace
-      } else {
-        alert(response.statusText);
-      }
-    }
+  } else {
+    alert("Please fill out all sign-up boxes");
+  }
 };
 
-document
-.querySelector('#signupBtn')
-.addEventListener('click', signupFormHandler);
+document.querySelector("#signupBtn").addEventListener("click", signupFormHandler);

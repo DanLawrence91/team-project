@@ -30,14 +30,6 @@ Team.belongsTo(Location, {
   foreignKey: "location_id",
 });
 
-Team.hasMany(User, {
-  foreignKey: "team_id",
-});
-
-User.belongsTo(Team, {
-  foreignKey: "team_id",
-});
-
 Team.hasMany(TeamReview, {
   foreignKey: "team_id",
   onDelete: "CASCADE",
