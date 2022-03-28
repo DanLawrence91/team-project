@@ -18,6 +18,15 @@ router.get("/", async (req, res) => {
   }
 });
 
+//have commented out the login for now because other wise its looking for a logged in user and not getting the route
+
+router.get('/dashboard', (req, res) => {
+  // if (req.session.logged_in) {
+    res.render('dashboard');
+    return;
+  //}
+});
+
 router.get("/login", (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
@@ -28,5 +37,7 @@ router.get("/login", (req, res) => {
   // needs to be login handlebars name here
   res.render("login");
 });
+
+
 
 module.exports = router;
