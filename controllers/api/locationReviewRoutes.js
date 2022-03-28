@@ -6,7 +6,7 @@ router.post("/", withAuth, async (req, res) => {
   try {
     const newLReview = await LocationReview.create({
       user_id: req.session.user_id,
-      location_id: req.body.id,
+      location_id: req.body.location_id,
       review_score: req.body.review_score,
       content: req.body.content,
     });
