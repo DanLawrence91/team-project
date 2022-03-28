@@ -2,9 +2,9 @@
 
 </div>
 
-<div class="row"></div>
+<div class="col custom-bkg2 my-3 p-2">
   <h3>Comment here if you'd like</h3>
-  <input type="text" id="newReview"></input>
+  <textarea class="w-100" type="text" id="newReview" rows="5"></textarea>
   <div class="rating" id="ratingList"> 
     <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label></input>
     <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label></input>
@@ -18,15 +18,21 @@
 <!-- {{!-- Comment detail--}} -->
 <div class="col mt-4 custom-bkg2">
   <h4>Reviews</h4>
-  <div class="col-md-6 project-list">
+  <div class="project-list">
+
     {{#each locationReviews as |locationReview|}}
       <div class="row mb-2">
-        <div class="col-md-8">
-          <h3>{{locationReview.review_score}}</h3>
-          <h4>{{locationReview.content}}</h4>
-          <p>Written by: {{user.firstname}} {{user.lastname}}</p>
+
+        <div class="w-100">
+          <div class="d-flex justify-content-between px-4">
+            <p class="d-inline">{{locationReview.content}}</p>
+            <p class="d-inline">{{locationReview.review_score}} out of 5</p>
+          </div>
+          <p class="px-4">Written by: {{user.firstname}} {{user.lastname}}</p>
+          <hr />
         </div>
       </div>
+
     {{/each}}
   </div>
 </div>

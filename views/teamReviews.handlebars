@@ -3,9 +3,9 @@
 
 </div>
 
-<div class="row"></div>
+<div class="col custom-bkg2 my-3 p-2">
   <h3>Comment here if you'd like</h3>
-  <input type="text" id="newReview"></input>
+  <textarea class="w-100" type="text" id="newReview" rows="5"></textarea>
   <div class="rating" id="ratingList"> 
     <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label></input>
     <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label></input>
@@ -25,11 +25,11 @@
       <div class="row mb-2">
 
         <div class="w-100">
-          <div class="d-flex justify-content-between">
+          <div class="d-flex justify-content-between px-4">
             <p class="d-inline">{{teamReview.content}}</p>
             <p class="d-inline">{{teamReview.review_score}} out of 5</p>
           </div>
-          <p>Written by: {{user.firstname}} {{user.lastname}}</p>
+          <p class="px-4">Written by: {{user.firstname}} {{user.lastname}}</p>
           <hr />
         </div>
       </div>
