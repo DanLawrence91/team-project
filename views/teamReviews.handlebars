@@ -5,19 +5,19 @@
 
 <!-- {{!-- Comment detail--}} -->
 <div class="col mt-4">
-  
-    <h4>Reviews</h4>
-    <div class="col-md-6 project-list">
-      {{#each teamReviews as |teamReview|}}
-        <div class="row mb-2">
-          <div class="col-md-8">
-            <h3>{{teamReview.review_score}}</h3>
-            <h4>{{teamReview.content}}</h4>
-            <p>Written by: {{user.first_name}} {{user.last_name}}</p>
-          </div>
+
+  <h4>Reviews</h4>
+  <div class="col-md-6 project-list">
+    {{#each teamReviews as |teamReview|}}
+      <div class="row mb-2">
+        <div class="col-md-8">
+          <h3>{{teamReview.review_score}}</h3>
+          <h4>{{teamReview.content}}</h4>
+          <p>Written by: {{user.first_name}} {{user.last_name}}</p>
         </div>
-      {{/each}}
-    </div>
+      </div>
+    {{/each}}
+  </div>
 </div>
 
-<script src="./js/teamscript.js"></script>
+<script src="/js/teamscript.js"></script>
