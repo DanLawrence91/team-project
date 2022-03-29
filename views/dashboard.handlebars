@@ -1,10 +1,10 @@
 <!-- trying to get DashBoard to work -->
 <div>
 
-  <h1>Hi {{user.firstname}} This is dashboard</h1>
+  <h1 class="custom-text">Hi {{user.firstname}}, here are your previous posts</h1>
 
   <div>
-    <h3>All Location Reviews here:</h3>
+    <h3 class="custom-text">All Location Reviews here:</h3>
     {{#each locationRevs as |locationReview|}}
       <p class="m-4">
         <a class="btn btn-primary btn-lg custom-btn custom-search" href="/location/{{locationReview.location_id}}/{{locationReview.location.location_name}}" role="button">{{locationReview.content}}{{locationReview.review_score}}</a>
@@ -13,7 +13,7 @@
   </div>
 
   <div>
-    <h3>All Team Reviews here:</h3>
+    <h3 class="custom-text">All Team Reviews here:</h3>
     {{#each teamRevs as |teamReview|}}
       <p class="m-4">
         <a class="btn btn-primary btn-lg custom-btn custom-search" href="/team/{{teamReview.team_id}}/{{teamReview.team.team_name}}" role="button">{{teamReview.content}}{{teamReview.review_score}}</a>
