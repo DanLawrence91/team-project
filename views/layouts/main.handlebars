@@ -3,40 +3,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sport Lover</title>
+    <title>Sport Travel Guider</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
     <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://kit.fontawesome.com/ec99cd4e92.js" crossorigin="anonymous"></script>
   </head>
   <body class="home">
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light custom-nb">
-        <a class="navbar-brand custom-text1" href="/">Home</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
-
-          <div class="d-inline my-2 my-lg-0 navbtn">
+      <nav class="navbar navbar-expand-lg navbar-light custom-nb gsap d-flex justify-content-between">
+        <div class="d-flex">
+          <div class="my-2 my-lg-0 navbtn">
+            <a class="nav-link custom-text1" href="/">Home</a>
+          </div>
+          <div class="my-2 my-lg-0 navbtn">
             <a class="nav-link custom-text1" href="/dashboard">Dashboard</a>
           </div>
-
-          <!-- need to add handlebars for if logged in or if logged out which will change this -->
-          <div class="log">
-            {{#if logged_in}}
-              <div class="d-inline my-2 my-lg-0 navbtn">
-                <a class="nav-link custom-text1" id="logout">Logout</a>
-              </div>
-            {{else}}
-              <div class="d-inline my-2 my-lg-0 navbtn">
-                <a class="nav-link custom-text1" href="/login">Login</a>
-              </div>
-            {{/if}}
-          </div>
         </div>
+
+        <!-- need to add handlebars for if logged in or if logged out which will change this -->
+        <div class="my-2 my-lg-0">
+          {{#if logged_in}}
+            <div class="d-inline navbtn">
+              <a class="nav-link custom-text1" id="logout">Logout</a>
+            </div>
+          {{else}}
+            <div class="d-inline navbtn">
+              <a class="nav-link custom-text1" href="/login">Login</a>
+            </div>
+          {{/if}}
+        </div>
+
       </nav>
 
-      <h1 class="text-center heading custom-text1">Sport Lover</h1>
+      <h1 class="text-center heading custom-text1">Sport Travel Guider <i class="fa-solid fa-futbol gsap"></i></h1>
     </header>
 
     <main class="container container-fluid mt-5">
