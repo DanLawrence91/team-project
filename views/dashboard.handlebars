@@ -1,19 +1,23 @@
 <!-- trying to get DashBoard to work -->
   <div>
 
-    <h1>{{firstname}}This is dashboard</h1>
+    <h1>Hey This is dashboard</h1>
+
+    <div>
+      <h3>All Location Reviews here:</h3>
+      {{#each locationRevs as |locationReview|}}
+        <p class="m-4">
+          <a class="btn btn-primary btn-lg custom-btn custom-search" href="/location/{{locationReview.location_id}}/{{locationReview.location_name}}" role="button">{{locationReview.content}}{{locationReview.review_score}}</a>
+        </p>
+      {{/each}}
     </div>
-  {{#each LocationReview as |review|}}
-            <p class="m-4">
-              <a class="btn btn-primary btn-lg custom-btn custom-search" href="" role="button">{{review.content}}{{review.review_score}}</a>
-            </p>
 
-          {{/each}}
-<!-- trying to get DashBoard to work
-            {{#each teamReviews as |review|}}
-            <p class="m-4">
-              <a class="btn btn-primary btn-lg custom-btn custom-search" href="" role="button">{{review.content}}{{review.review_score}}</a>
-            </p>
-
-          {{/each}} -->
-          
+    <div>
+      <h3>All Team Reviews here:</h3>
+      {{#each teamRevs as |teamReview|}}
+        <p class="m-4">
+          <a class="btn btn-primary btn-lg custom-btn custom-search" href="/team/{{teamReview.team_id}}/{{teamReview.team_name}}" role="button">{{teamReview.content}}{{teamReview.review_score}}</a>
+        </p>
+      {{/each}}
+    </div>
+</div>

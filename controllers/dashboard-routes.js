@@ -1,27 +1,62 @@
 // Dashboard Routes to get and edit posts
+// const router = require("express").Router();
+// const { User, LocationReview, TeamReview } = require("../models");
+// const withAuth = require("../utils/auth");
 
-const router = require("express").Router();
-const { User, LocationReview } = require("../models");
-const withAuth = require("../utils/auth");
+// router.get("/", withAuth, async (req, res) => {
+// Trying to hide the user id from url
+  // try {
+    // const locationReviewData = await LocationReview.findAll(
+    //   {
+    //   include: [{
+    //     association: LocationReview.belongsTo(User, {
+    //       foreignKey: "user_id",
+    //     }),
+    //     attributes: ["review_score", "content", "location_id"],
+    //     where: {
+    //       user_Id: req.session.user_Id
+    //     }
+    //   }]
+    // }
+    // );
 
-router.get("/", withAuth, async (req, res) => {
-  try {
+    // const locationRevData = await User.findByPk(req.session.user_Id, {
+    //   include: [
+    //     {
+    //       model: LocationReview,
+    //       attributes: ["review_score", "content", "location_id"],
+    //       include: {
+    //         model: User,
+    //         attributes: { exclude: ["password"]},
+    //       },
+    //     },
+    //   ],
+    // });
+    
+    // const locationReviewArray = locationRevData.get({ plain: true });
 
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ["password"] },
-      include: [{ model: LocationReview }],
-    });
+    // const locationData = await Location.findAll();
+    // const locations = locationData.map((location) => location.get({ plain: true }));
+    // const userData = await LocationReview.findAll({
+    //   include: { 
+    //       model: LocationReview,
+    //       attributes: ["review_score", "content", "location_id"],
+    //       where: {
+    //         user_Id: req.session.user_Id,
+    //       }
+    //   }
+    // });
 
-    const user = userData.get({ plain: true });
+    // const locationReviews = locationReviewArray.get({ plain: true });
 
-    res.render("dashboard", {
-      ...user,
-      logged_in: true,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     res.render("dashboard", {
+//       ...locationReviewArray,
+//       logged_in: true
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 //router.get("/", withAuth, async (req, res) => {
   //try {
@@ -123,5 +158,42 @@ router.get("/", withAuth, async (req, res) => {
    //   res.status(500).json(err);
    // });
 // });
+
+const router = require("express").Router();
+const { LocationReview, TeamReview, Team, User } = require("../models");
+const withAuth = require("../utils/auth");
+
+router.get("/", withAuth, async (req, res) => {
+  try {
+    const teamRevData = await TeamReview.findAll({
+      where: {
+        user_id: req.session.user_id
+      },
+      include: [
+        {
+          model: Team,
+          attributes: ['team_name'],
+        },
+      ]
+    });
+    const teamRevs = teamRevData.map((team) => team.get({ plain: true }));
+
+    const locationRevData = await LocationReview.findAll({
+      where: {
+        user_id: req.session.user_id
+      }
+    });
+    const locationRevs = locationRevData.map((location) => location.get({ plain: true }));
+
+    res.render("dashboard", {
+      teamRevs,
+      locationRevs,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 
 module.exports = router;
