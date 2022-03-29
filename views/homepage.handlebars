@@ -16,6 +16,7 @@
       <a class="btn btn-primary btn-lg custom-btn custom-text" href="#teamlist" role="button">Team</a>
     </p>
   </div>
+
 </section>
 <section class="container custom-bkg1">
   <div class="row">
@@ -23,7 +24,7 @@
 
       <div class="card-body custom-card-content custom-bkg">
 
-        <div>
+        <div class="content" hidden>
           <h4 class="card-title custom-text" id="locationlist">Locations:</h4>
 
           {{#each locations as |location|}}
@@ -34,7 +35,7 @@
           {{/each}}
         </div>
 
-        <div>
+        <div class="content" hidden>
           <h4 class="card-title custom-text" id="teamlist">Teams:</h4>
 
           {{#each teams as |team|}}
@@ -44,7 +45,6 @@
           {{/each}}
         </div>
       </div>
-
     </div>
   </div>
 </section>
