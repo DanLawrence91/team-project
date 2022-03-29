@@ -87,7 +87,7 @@ const locationHandler = async (event) => {
         renderlistLoc.innerHTML += `
           <div class="col-sm-10 col-md-6">
             <div class="card custom-bkg2">
-              <img src="${stringInfo.photo.images.medium.url}" class="images p-4" alt="${stringInfo.name} image">
+              <a class="custom-card-content" href="${stringInfo.website}"><img src="${stringInfo.photo.images.medium.url}" class="images p-4" alt="${stringInfo.name} image"></a>
               <h5 class="text-center">${stringInfo.name}</h5>
               <p class="text-center">Rating: ${stringInfo.rating}</p>
             </div>
