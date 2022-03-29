@@ -94,6 +94,10 @@ html {
   font-size: 78px;
 }
 
-[hidden] {
-  display: none;
+#location {
+display: none;
 }
+
+#team {
+  display: none;
+  }
