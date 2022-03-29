@@ -7,8 +7,8 @@ This application allows a user to log in to their account and then search for an
 ## User Story
 ```
 AS a USER
-I WANT a website where I can view other users experiences regarding there trips to Premier League Clubs in England
-SO THAT I can plan my trip around there previous experiences & leave a rewview for future users
+I WANT a website where I can view other users experiences regarding their trips to Premier League Clubs in England
+SO THAT I can plan my trip around their previous experiences & leave a review for future users
 ```
 
 ## Installation
