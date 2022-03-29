@@ -3,21 +3,27 @@
 
   <h1 class="custom-text">Hi {{user.firstname}}, here are your previous posts</h1>
 
-  <div>
-    <h3 class="custom-text">All Location Reviews here:</h3>
-    {{#each locationRevs as |locationReview|}}
-      <p class="m-4">
-        <a class="btn btn-primary btn-lg custom-btn custom-search" href="/location/{{locationReview.location_id}}/{{locationReview.location.location_name}}" role="button">{{locationReview.content}}{{locationReview.review_score}}</a>
-      </p>
-    {{/each}}
-  </div>
+  <div class="custom-bkg custom-card-content p-3">
+    <div>
+      <h3 class="custom-text">All Location Reviews here:</h3>
+      {{#each locationRevs as |locationReview|}}
+        <p class="m-4">
+          <a class="btn btn-success btn-lg custom-btn custom-search" href="/location/{{locationReview.location_id}}/{{locationReview.location.location_name}}" role="button">{{locationReview.content}}
+            <br />
+            - Score of
+            {{locationReview.review_score}}
+            out of 5</a>
+        </p>
+      {{/each}}
+    </div>
 
-  <div>
-    <h3 class="custom-text">All Team Reviews here:</h3>
-    {{#each teamRevs as |teamReview|}}
-      <p class="m-4">
-        <a class="btn btn-primary btn-lg custom-btn custom-search" href="/team/{{teamReview.team_id}}/{{teamReview.team.team_name}}" role="button">{{teamReview.content}}{{teamReview.review_score}}</a>
-      </p>
-    {{/each}}
+    <div>
+      <h3 class="custom-text">All Team Reviews here:</h3>
+      {{#each teamRevs as |teamReview|}}
+        <p class="m-4">
+          <a class="btn btn-success btn-lg custom-btn custom-search" href="/team/{{teamReview.team_id}}/{{teamReview.team.team_name}}" role="button">{{teamReview.content}} <br /> - Score of {{teamReview.review_score}} out of 5</a>
+        </p>
+      {{/each}}
+    </div>
   </div>
 </div>

@@ -86,10 +86,22 @@ html {
 
 .images {
   margin: auto;
-  width: 400px;
-  height: 300px;
+  width: 80%;
+  height: 20em;
 }
 
 .heading {
   font-size: 78px;
+}
+
+@media screen and (max-width: 990px) {
+  .images {
+    height: 10em;
+  }
+}
+
+@media screen and (max-width: 775px) {
+  .custom-search {
+    width: 100%;
+  }
 }

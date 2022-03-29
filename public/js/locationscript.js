@@ -85,7 +85,7 @@ const locationHandler = async (event) => {
 
       function printResResults(stringInfo) {
         renderlistLoc.innerHTML += `
-          <div class="col-6">
+          <div class="col-sm-10 col-md-6">
             <div class="card custom-bkg2">
               <img src="${stringInfo.photo.images.medium.url}" class="images p-4" alt="${stringInfo.name} image">
               <h5 class="text-center">${stringInfo.name}</h5>
@@ -101,7 +101,6 @@ window.addEventListener("load", locationHandler);
 // locationHandler();
 // window.onload(locationHandler)
 
-
 const reviewPostHandler = async (event) => {
   event.preventDefault();
 
@@ -112,11 +111,9 @@ const reviewPostHandler = async (event) => {
   console.log(location_id);
 
   function getChoice() {
-
     const ratingList = document.querySelector("#ratingList");
     console.log(ratingList);
     for (let i = 0; i < 10; i = i + 2) {
-
       let ratingSelected = ratingList.children[i];
       if (ratingSelected.checked) {
         // console.log(ratingSelected);
@@ -127,7 +124,6 @@ const reviewPostHandler = async (event) => {
   let review_score = getChoice();
   // console.log(typeof review_score);
 
-
   let content = document.querySelector("#newReview").value.trim();
 
   if (location_id && review_score && content) {
@@ -136,7 +132,6 @@ const reviewPostHandler = async (event) => {
       method: "POST",
       body: JSON.stringify({ location_id, review_score, content }),
       headers: { "Content-Type": "application/json" },
-
     });
 
     if (response.ok) {
@@ -149,6 +144,4 @@ const reviewPostHandler = async (event) => {
   }
 };
 
-
 document.querySelector("#reviewBtn").addEventListener("click", reviewPostHandler);
-
