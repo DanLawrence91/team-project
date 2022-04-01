@@ -1,19 +1,5 @@
 <h2 class="custom-text1">{{team_name}}</h2>
-<div class="col" id="team-content">
-</div>
-
-<div class="col custom-bkg2 my-3 p-2">
-  <h3>Comment here if you'd like</h3>
-  <textarea class="w-100" type="text" id="newReview" rows="5"></textarea>
-  <div class="rating" id="ratingList"> 
-    <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label></input>
-    <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label></input>
-    <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label></input>
-    <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label></input>
-    <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label></input>
-  </div>
-  <button id="reviewBtn">Comment</button>
-</div>
+<p class="custom-text1">See below for upcoming fixtures</p>
 
 <!-- {{!-- Comment detail--}} -->
 <div class="col mt-4 custom-bkg2">
@@ -35,6 +21,23 @@
 
     {{/each}}
   </div>
+</div>
+
+<div class="col custom-bkg2 my-3 p-2">
+  <h3>Comment here if you'd like</h3>
+  <textarea class="w-100" type="text" id="newReview" rows="5"></textarea>
+  <div class="rating" id="ratingList"> 
+    <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label></input>
+    <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label></input>
+    <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label></input>
+    <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label></input>
+    <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label></input>
+  </div>
+  <button id="reviewBtn">Comment</button>
+</div>
+
+
+<div class="col" id="team-content">
 </div>
 
 <script src="/js/teamscript.js"></script>
